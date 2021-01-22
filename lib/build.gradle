@@ -1,0 +1,17 @@
+plugins {
+    // Apply the groovy Plugin to add support for Groovy.
+    id 'groovy'
+
+    // Apply the java-library plugin for API and implementation separation.
+    id 'java-library'
+}
+
+repositories {
+    // Use JCenter for resolving dependencies.
+    jcenter()
+}
+
+dependencies {
+    // Code does not compiles with Groovy 2.5.14, but compiles with 2.5.13
+    implementation 'org.codehaus.groovy:groovy:2.5.14'
+}
